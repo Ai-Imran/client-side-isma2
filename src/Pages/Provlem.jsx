@@ -32,7 +32,7 @@ const Problem = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:5000/users-problems', options);
+            const response = await fetch('http://localhost:3000/users-problems', options);
             if (!response.ok) {
                 throw new Error('Network response was not ok.');
                 

@@ -62,7 +62,7 @@ const Passenger = () => {
       // Replace updateUserProfile with the appropriate function from your AuthContext
       updateUserProfile(name, imageData.data.url, phoneNumber);
       navigate('/user-start');
-      const postResponse = await fetch('http://localhost:5000/users-my', {
+      const postResponse = await fetch('http://localhost:3000/users-my', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

@@ -16,7 +16,7 @@ const Login = () => {
             })
             .catch(err => {
                 
-                // console.log(err);
+                console.log(err);
             });
     };
 
@@ -95,7 +95,7 @@ const Login = () => {
                 <div className="mx-auto text-[14px] lg:text-[16px] lg:w-1/2 w-11/12">
                     <p className=" font-bold text-justify">
                         আপনি চাইলে{' '}
-                        <FaGoogle onClick={handleGoogle} className="inline-block mx-2 text-2xl text-lime-500" /> গুগল
+                        <FaGoogle onClick={handleGoogle} className="inline-block bg-lime-700 px-1 rounded-md text-2xl text-yellow-400" /> গুগল
                         দিয়ে একাউন্ট খুলতে পারেন কিন্তু এতে আমাদের এআই টুলস / অ্যালগরিদম আপনাকে খুঁজতে পারে
                         না তাই সকল তথ্য দিয়ে{' '}
                         <Link to={'/signup'}>

@@ -98,6 +98,7 @@ const AllUsers = () => {
                 // Handle error
             });
     };
+    // console.log(filteredUsers)
 
     const handleDeleteUser = user => {
         Swal.fire({

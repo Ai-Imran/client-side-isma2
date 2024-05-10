@@ -58,7 +58,7 @@ const AuthProviders = ({ children }) => {
             // if (currentUser) {
             //     // Assuming currentUser is defined somewhere in your code
             //     const userInfo = { email: currentUser.email };
-            //     fetch('http://localhost:5000/jwt', {
+            //     fetch('http://localhost:3000/jwt', {
             //         method: 'POST',
             //         headers: {
             //             'Content-Type': 'application/json'

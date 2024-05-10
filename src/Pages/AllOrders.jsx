@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 
 const AllOrders = () => {
     const fetchOrders = async () => {
-        const response = await fetch("http://localhost:5000/users-orders");
+        const response = await fetch("http://localhost:3000/users-orders");
         if (!response.ok) {
             throw new Error("Failed to fetch orders");
         }
@@ -51,7 +51,7 @@ const AllOrders = () => {
         }).then(async (result) => {
             if (result.isConfirmed) {
                 try {
-                    await fetch(`http://localhost:5000/users-orders/${id}`, {
+                    await fetch(`http://localhost:3000/users-orders/${id}`, {
                         method: "DELETE",
                     });
                     await refetch();

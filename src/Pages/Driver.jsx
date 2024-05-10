@@ -59,7 +59,7 @@ const Driver = () => {
         monthlyEarnings, experience, vehicleOwnership, hasLicense,password, photoUrl: imageData.data.url,work:"Driver"
       };
   
-         await fetch('http://localhost:5000/users-my', {
+         await fetch('http://localhost:3000/users-my', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

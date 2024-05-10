@@ -462,7 +462,7 @@ const UserStartService = () => {
     
         try {
             // Sending POST request
-            const response = await fetch('http://localhost:5000/users-orders', options);
+            const response = await fetch('http://localhost:3000/users-orders', options);
             if (!response.ok) {
                 throw new Error('Network response was not ok.');
             }
@@ -565,8 +565,8 @@ const UserStartService = () => {
                          </option>
                         <option value="হোমনা থেকে মুড়গাচড়">হোমনা থেকে মুড়গাচড় </option>
                         <option value="মুড়গাচড় থেকে হোমনা">মুড়গাচড় থেকে হোমনা </option>
-                        <option value="মুড়গাচড় থেকে সিনাইয়া">মুড়গাচড় থেকে সিনাইয়া </option>
-                        <option value="সিনাইয়া থেকে মুড়গাচড়">সিনাইয়া থেকে মুড়গাচড় </option>
+                        {/* <option value="মুড়গাচড় থেকে সিনাইয়া">মুড়গাচড় থেকে সিনাইয়া </option>
+                        <option value="সিনাইয়া থেকে মুড়গাচড়">সিনাইয়া থেকে মুড়গাচড় </option> */}
                         <option value="হোমনা থেকে কালমিনা">হোমনা থেকে কালমিনা </option>
                         <option value="কালমিনা থেকে হোমনা">কালমিনা থেকে হোমনা </option>
                         <option value="হোমনা থেকে কারাকান্দি">হোমনা থেকে কারাকান্দি </option>
@@ -644,9 +644,10 @@ const UserStartService = () => {
                     </div>
                     <div className="flex justify-between">
                         <p>সর্বমোট খরচ</p>
-                        <p className="text-[13px] text-yellow-700">সময় ও পরিস্থিতি ও সার্ভারজনিত কারনে ভিন্ন/ভুল হতে পারে</p>
+                       
                          <span className="font-bold"> {totalCost} টাকা</span>
                     </div>
+                    <p className="text-[12px] lg:text-[16px] text-yellow-700">সময় ও পরিস্থিতি ও সার্ভারজনিত কারনে ভিন্ন/ভুল হতে পারে সাবমিট করে আমাদের কল করতে ভুলবেন না,ধন্যবাদ।</p>
                 </div>
 
                 <div className="mx-auto  text-center">
