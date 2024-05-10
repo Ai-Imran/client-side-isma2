@@ -9,7 +9,7 @@ const AddRevenue = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3000/add-money', { amount: parseFloat(amount) });
+            const response = await axios.post('http://localhost:5000/add-money', { amount: parseFloat(amount) });
             if (response.status === 200) {
                 setAmount('');
                 fetchTotalMoney();
@@ -22,7 +22,7 @@ const AddRevenue = () => {
 
     const fetchTotalMoney = async () => {
         try {
-            const response = await axios.get('http://localhost:3000/total-revenue');
+            const response = await axios.get('http://localhost:5000/total-revenue');
             if (response.status === 200) {
                 setTotalMoney(response.data.totalRevenue);
             }
@@ -33,7 +33,7 @@ const AddRevenue = () => {
 
     const fetchAddingMoneyList = async () => {
         try {
-            const response = await axios.get('http://localhost:3000/adding-money-list');
+            const response = await axios.get('http://localhost:5000/adding-money-list');
             if (response.status === 200) {
                 setAddingMoneyList(response.data);
             }
@@ -44,7 +44,7 @@ const AddRevenue = () => {
 
     const handleDelete = async (id) => {
         try {
-            const response = await axios.delete(`http://localhost:3000/adding-money-list/${id}`);
+            const response = await axios.delete(`http://localhost:5000/adding-money-list/${id}`);
             if (response.status === 200) {
                 fetchAddingMoneyList();
             }

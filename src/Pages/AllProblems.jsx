@@ -7,7 +7,7 @@ const AllProblems = () => {
     const [searchTerm, setSearchTerm] = useState("");
     
     const fetchProblems = async () => {
-        const response = await fetch("http://localhost:3000/users-problems");
+        const response = await fetch("http://localhost:5000/users-problems");
         if (!response.ok) {
             throw new Error("Failed to fetch problems");
         }
@@ -54,7 +54,7 @@ const AllProblems = () => {
         }).then(async (result) => {
             if (result.isConfirmed) {
                 try {
-                    await fetch(`http://localhost:3000/users-problems/${id}`, {
+                    await fetch(`http://localhost:5000/users-problems/${id}`, {
                         method: "DELETE",
                     });
                     await refetch();

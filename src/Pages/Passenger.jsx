@@ -60,9 +60,9 @@ const Passenger = () => {
 
       // Update user profile with image URL
       // Replace updateUserProfile with the appropriate function from your AuthContext
-      updateUserProfile(name, imageData.data.url, phoneNumber);
+      updateUserProfile(name, imageData.data?.url, phoneNumber);
       navigate('/user-start');
-      const postResponse = await fetch('http://localhost:3000/users-my', {
+      const postResponse = await fetch('http://localhost:5000/users-my', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -136,6 +136,7 @@ const Passenger = () => {
                   আপনার একটি ভালো ও ক্লিয়ার ছবি দিন । 
                 </label>
                 <input
+                required
                   className="bg-gray-700 w-11/12 rounded-md text-purple-500 focus:border-lime-500 focus:border focus:shadow-lg outline-none px-3 py-2 block"
                   type="file"
                   name="photo"

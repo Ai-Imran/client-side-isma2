@@ -59,7 +59,7 @@ const Driver = () => {
         monthlyEarnings, experience, vehicleOwnership, hasLicense,password, photoUrl: imageData.data.url,work:"Driver"
       };
   
-         await fetch('http://localhost:3000/users-my', {
+         await fetch('http://localhost:5000/users-my', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -215,6 +215,7 @@ const Driver = () => {
                   আপনার একটি ভালো ও ক্লিয়ার ছবি দিন ।
                 </label>
                 <input
+                required
                   className="bg-gray-700 w-11/12 rounded-md text-purple-500 focus:border-lime-500 focus:border focus:shadow-lg outline-none px-3 py-2 block"
                   type="file"
                   name="photo"

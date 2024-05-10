@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 
 const createPost = async (postData) => {
   try {
-    const response = await fetch("http://localhost:3000/all-user-post", {
+    const response = await fetch("http://localhost:5000/all-user-post", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -25,7 +25,7 @@ const createPost = async (postData) => {
 
 const deletePost = async (postId, refetch) => {
   try {
-    await fetch(`http://localhost:3000/all-user-post/${postId}`, {
+    await fetch(`http://localhost:5000/all-user-post/${postId}`, {
       method: "DELETE",
     });
     await refetch();
@@ -62,7 +62,7 @@ const Posts = () => {
   const fetchPosts = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch("http://localhost:3000/all-user-post");
+      const response = await fetch("http://localhost:5000/all-user-post");
       if (!response.ok) {
         throw new Error("Failed to fetch posts");
       }
@@ -172,7 +172,7 @@ const Posts = () => {
     setIsLoading(true);
     setError(null);
     try {
-      let url = "http://localhost:3000/all-user-posts";
+      let url = "http://localhost:5000/all-user-posts";
       if (searchTerm && searchTerm.trim() !== "") {
         url += `?name=${searchTerm}`;
       }

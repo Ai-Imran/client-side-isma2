@@ -16,7 +16,7 @@ const FindUser = () => {
 
     const fetchUsers = async () => {
         try {
-            const response = await fetch('http://localhost:3000/users-my');
+            const response = await fetch('http://localhost:5000/users-my');
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
